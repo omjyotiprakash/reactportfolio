@@ -1,5 +1,5 @@
-import {FaJava , FaReact} from 'react-icons/fa';
-import {SiNextdotjs, SiTypescript, SiTailwindcss, SiFastapi, SiPython, SiDocker, SiMongodb, SiAngular} from 'react-icons/si';
+import {FaReact} from 'react-icons/fa';
+import {SiJavascript, SiHtml5, SiCss3, SiBootstrap, SiTypescript, SiTailwindcss, SiFastapi, SiExpress, SiMongodb, SiMysql} from 'react-icons/si';
 import {DiNodejsSmall} from 'react-icons/di';
 import { motion, useMotionValue } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
@@ -8,17 +8,18 @@ import { useEffect, useRef, useState } from 'react';
 export default function Skills() {
 
 const skills = [
-    { icon: <FaJava />, name: "Java" },
+    { icon: <SiJavascript />, name: "JavaScript" },
     { icon: <FaReact />, name: "React" },
-    { icon: <SiNextdotjs />, name: "Next.js" },
+    { icon: <SiHtml5 />, name: "HTML" },
+    { icon: <SiCss3 />, name: "CSS" },
+    { icon: <SiBootstrap />, name: "Bootstrap" },
     { icon: <SiTypescript />, name: "TypeScript" },
     { icon: <SiTailwindcss />, name: "Tailwind CSS" },
     { icon: <SiFastapi />, name: "FastAPI" },
-    { icon: <SiPython />, name: "Python" },
-    { icon: <SiDocker />, name: "Docker" },
     { icon: <DiNodejsSmall />, name: "Node.js" },
+    { icon: <SiExpress />, name: "Express.js" },
     { icon: <SiMongodb />, name: "MongoDB" },
-    { icon: <SiAngular />, name: "Angular" },
+    { icon: <SiMysql />, name: "SQL" },
   ];
 const repeated = [...skills , ...skills]
 
