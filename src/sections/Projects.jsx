@@ -51,12 +51,14 @@ export default function Projects() {
         title: "QUICKNOTE - A Social Note Sharing Platform",
         link: "https://quicknote.co.in",
         bgColor: "#0d4d3d",
+        tech: ["React", "Node.js", "Express", "MongoDB"],
         image: isMobile ? photo1 : img1, // Mobile vs desktop image
       },
       {
         title: "Spotify Clone - Web App",
         link: "https://github.com/omjyotiprakash/spotify",
         bgColor: "#3884d3",
+        tech: ["React", "Tailwind CSS", "Spotify API"],
         image: isMobile ? photo2 : img2,
       },
       // {
@@ -121,7 +123,7 @@ export default function Projects() {
         </h2>
 
         {/* Main Project Display Area */}
-        <div className={`relative w-full flex-1 flex items-center justify-center ${isMobile ? "-mt-4" : ""}`}>
+        <div className={`relative w-full flex-1 flex items-center justify-center ${isMobile ? "-mt-4 mb-40" : "mb-36"}`}>
           {projects.map((project, idx) => (
             <div
               key={project.title}
@@ -139,10 +141,10 @@ export default function Projects() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 30 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className={`block text-center text-[clamp(2rem,6vw,5rem)] text-white/95 sm:absolute sm:-top-21 sm:left-[35%] lg:left-[-5%] sm:mb-0 font-bangers italic font-semibold ${
-                      isMobile ? "-mt-25" : ""
+                    className={`block text-center text-[clamp(1.5rem,4vw,3rem)] text-white/95 mb-3 font-bangers italic font-semibold ${
+                      ""
                     }`}
-                    style={{ zIndex: 5, textAlign: isMobile ? "center" : "left" }}
+                    style={{ zIndex: 5, textAlign: "center" }}
                   >
                     {project.title}
                   </MH3>
@@ -152,15 +154,25 @@ export default function Projects() {
               {/* Project Image Wrapper */}
               <div
                 className={`relative w-fit max-w-full mx-auto overflow-hidden bg-black/20 shadow-2xl md:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] ${
-                  isMobile ? "mb-6 rounded-lg" : "mb-10 sm:mb-12 rounded-xl"
+                  isMobile ? "mb-4 rounded-lg" : "mb-4 rounded-xl"
                 }`}
                 style={{ zIndex: 10, transition: "box-shadow 250ms ease" }}
               >
+                {/* Browser bar */}
+                <div className="flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur border-b border-white/10">
+                  <span className="w-3 h-3 rounded-full bg-red-400" />
+                  <span className="w-3 h-3 rounded-full bg-yellow-400" />
+                  <span className="w-3 h-3 rounded-full bg-green-400" />
+                  <span className="ml-3 text-xs text-white/60 truncate">
+                    {project.link.replace("https://", "")}
+                  </span>
+                </div>
+
                 {/* Project Image */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="block w-auto h-auto max-w-full max-h-[62vh] sm:max-h-[66vh] object-contain drop-shadow-xl md:drop-shadow-2xl"
+                  className="block w-auto h-auto max-w-full max-h-[40vh] sm:max-h-[46vh] object-contain drop-shadow-xl md:drop-shadow-2xl"
                   style={{
                     position: "relative",
                     zIndex: 10,
@@ -178,20 +190,42 @@ export default function Projects() {
                   }}
                 />
               </div>
+
+              {/* Tech chips */}
+              <div className="flex flex-wrap justify-center gap-2">
+                {project.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 text-xs sm:text-sm rounded-full bg-white/10 border border-white/20 backdrop-blur text-white/90"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
 
         {/* View Project Button */}
-        <div className={`absolute ${isMobile ? "bottom-20" : "bottom-10"}`}>
+        <div className={`absolute flex flex-col items-center gap-4 ${isMobile ? "bottom-20" : "bottom-10"}`}>
+          <div className="flex gap-2">
+            {projects.map((p, i) => (
+              <span
+                key={p.title}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  activeIndex === i ? "w-8 bg-white" : "w-1.5 bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
           <a
             href={activeProject?.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 font-semibold rounded-lg bg-white text-black hover:bg-gray-200 transition-all"
+            className="inline-block px-8 py-3 font-semibold rounded-full bg-white text-black shadow-xl hover:bg-gray-100 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
             aria-label={`View ${activeProject?.title}`}
           >
-            View Project
+            View Project →
           </a>
         </div>
       </div>
