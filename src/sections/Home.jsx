@@ -33,7 +33,7 @@ const glowVariants = {
 
 const Home = React.forwardRef((props, ref) => {
   const roles = useMemo(
-    () => ["Software Developer", "Web Developer", "Part-time Film-Maker"],
+    () => ["MERN Stack Developer", "Full Stack Web Developer", "React Developer"],
     []
   );
   const [index, setIndex] = useState(0);
@@ -135,9 +135,9 @@ const Home = React.forwardRef((props, ref) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              I turn complex ideas into seamless, high-impact web experiences —
-              building modern, scalable, and lightning-fast applications that
-              make a difference.
+              I build full-stack web apps with MongoDB, Express, React and Node.js —
+              scalable backends, fast APIs, and smooth interfaces that
+              turn ideas into real products.
             </motion.p>
 
             {/* buttons */}

@@ -109,7 +109,7 @@ const Footer = () => {
         {/* --- Personal Quote / Tagline --- */}
         {/* Replace this with your favorite quote or brand message */}
         <p className="text-gray-300 italic max-w-xl">
-          “Success is when preparation meets opportunity.”
+          Building full-stack web apps with MongoDB, Express, React and Node.js.
         </p>
 
         {/* --- Copyright / Trademark --- */}
