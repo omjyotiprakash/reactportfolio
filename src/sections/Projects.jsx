@@ -11,7 +11,7 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 // import img3 from "../assets/img3.JPG";
 import photo1 from "../assets/photo1.png";
-import photo2 from "../assets/photo2.PNG";
+import photo2 from "../assets/photo2.png";
 // import photo3 from "../assets/photo3.png";
 
 const MH3 = motion.h3; 
