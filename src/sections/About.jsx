@@ -37,7 +37,7 @@ export default function About() {
             
             <div className="absolute inset-0 " />
            
-            <img src={p} alt="test" />
+            <img src={p} alt="OM Jyoti Prakash" />
           </motion.div>
 
           {/* Name + Role + Bio + CTAs */}
@@ -50,7 +50,7 @@ export default function About() {
             </p>
 
             <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
-              I build scalable, modern applications with a strong focus on clean architecture, delightful UX, and performance. My toolkit spans Java, React, Next.js, TypeScript, Tailwind CSS, and FastAPI—bringing ideas to life from concept to production with robust APIs and smooth interfaces.
+              I build scalable full-stack web applications with a strong focus on clean architecture, smooth UX, and performance. My toolkit is the MERN stack: MongoDB, Express, React, and Node.js, plus Tailwind CSS and Framer Motion. I take ideas from concept to production with robust REST APIs and polished interfaces.
             </p>
 
             {/* Quick stats */}
@@ -109,10 +109,10 @@ export default function About() {
               About Me
             </h3>
             <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-             I’m a Software Developer, Content Creator, and Web Developer — passionate about building fast, resilient applications and sharing coding insights on Instagram and YouTube.
+             I’m a MERN stack developer and content creator, passionate about building fast, real-world products like QuickNote, a social note-sharing platform, and sharing what I learn on Instagram and YouTube.
             </p>
             <p className="mt-4 text-gray-400 text-base sm:text-lg">
-              I love turning ideas into scalable, user‑friendly products that make an impact. 
+              I love turning ideas into scalable, user-friendly products, from backend APIs to the last pixel on screen. 
             </p>
           </motion.div>
         </div>
